@@ -1,0 +1,65 @@
+baseURL = "http://kirkeasterson.com/"
+languageCode = "en-us"
+title = "Kirk Easterson"
+theme = "coder"
+
+[params]
+author = "Kirk Easterson"
+description = "Kirk Easterson's personal website"
+keywords = "programmer,developer,personal"
+info = ["Programmer", "Musician"]
+avatarURL = "images/me.png"
+#gravatar = "john.doe@example.com"
+# footerContent = "Enter a text here."
+dateFormat = "02 January 2006"
+hideFooter = false
+hideCredits = true
+hideCopyright = false
+since = 2019
+colorScheme = "auto"
+
+[[params.social]]
+name = "Github"
+icon = "fa fa-github"
+weight = 1
+url = "https://github.com/KirkEasterson"
+
+### TODO: Make a gitlab
+# [[params.social]]
+# name = "Gitlab"
+# icon = "fa fa-gitlab"
+# weight = 2
+# url = "https://gitlab.com/kirkeasterson/"
+
+[[params.social]]
+name = "Twitter"
+icon = "fa fa-twitter"
+weight = 3
+url = "https://twitter.com/kirkeasterson"
+
+[[params.social]]
+name = "LinkedIn"
+icon = "fa fa-linkedin"
+weight = 4
+url = "https://www.linkedin.com/in/kirkeasterson/"
+
+[[languages.en.menu.main]]
+name = "About"
+weight = 1
+url = "about/"
+
+### TODO: Add blogs, projects, and contact information
+# [[languages.en.menu.main]]
+# name = "Blog"
+# weight = 2
+# url = "posts/"
+
+# [[languages.en.menu.main]]
+# name = "Projects"
+# weight = 3
+# url = "projects/"
+
+# [[languages.en.menu.main]]
+# name = "Contact me"
+# weight = 5
+# url = "contact/"
