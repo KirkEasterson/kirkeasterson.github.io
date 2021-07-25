@@ -17,6 +17,7 @@ hideCredits = true
 hideCopyright = false
 since = 2019
 colorScheme = "auto"
+favicon = "favicon.ico"
 
 [[params.social]]
 name = "Github"
@@ -32,16 +33,16 @@ url = "https://github.com/KirkEasterson"
 # url = "https://gitlab.com/kirkeasterson/"
 
 [[params.social]]
-name = "Twitter"
-icon = "fa fa-twitter"
-weight = 3
-url = "https://twitter.com/kirkeasterson"
-
-[[params.social]]
 name = "LinkedIn"
 icon = "fa fa-linkedin"
 weight = 4
 url = "https://www.linkedin.com/in/kirkeasterson/"
+
+[[params.social]]
+name = "Twitter"
+icon = "fa fa-twitter"
+weight = 3
+url = "https://twitter.com/kirkeasterson"
 
 [[languages.en.menu.main]]
 name = "About"
