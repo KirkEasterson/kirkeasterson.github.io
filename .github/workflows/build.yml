@@ -1,5 +1,5 @@
 ---
-name: build and deploy
+name: build
 
 on:
   push:
@@ -24,17 +24,3 @@ jobs:
 
       - name: Build
         run: hugo -s src/ --minify
-
-      - name: Upload build
-        uses: actions/upload-artifact@v4
-        with:
-          name: build-output
-          path: src/public
-          retention-days: 10
-
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
-        if: github.ref == 'refs/heads/main'
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: src/public
