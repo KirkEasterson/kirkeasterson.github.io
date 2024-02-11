@@ -19,5 +19,10 @@ hugo server -D -s src/
 
 ### Running in docker
 
-- TODO
+- Install [docker-compose](https://docs.docker.com/compose/install/)
+- Run the hugo server:
+
+```
+docker-compose up
+```
 
