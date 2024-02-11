@@ -78,32 +78,32 @@ url = "https://www.linkedin.com/in/kirkeasterson/"
 [[languages.en.menu.main]]
 name = "About Me"
 weight = 1
-url = "about/"
+url = "en/about/"
 
 [[languages.se.menu.main]]
 name = "Om mig"
 weight = 1
-url = "om/"
+url = "se/om/"
 
 [[languages.no.menu.main]]
 name = "Om meg"
 weight = 1
-url = "om/"
+url = "no/om/"
 
 
 [[languages.en.menu.main]]
 name = "Contact Me"
 weight = 2
-url = "contact/"
+url = "en/contact/"
 
 
 [[languages.se.menu.main]]
 name = "Kontakta mig"
 weight = 2
-url = "kontakta/"
+url = "se/kontakta/"
 
 
 [[languages.no.menu.main]]
 name = "Kontakt meg"
 weight = 2
-url = "kontakt/"
+url = "no/kontakt/"
