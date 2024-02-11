@@ -38,12 +38,6 @@ icon = "fa fa-linkedin"
 weight = 4
 url = "https://www.linkedin.com/in/kirkeasterson/"
 
-[[params.social]]
-name = "Twitter"
-icon = "fa fa-twitter"
-weight = 3
-url = "https://twitter.com/kirkeasterson"
-
 [[languages.en.menu.main]]
 name = "About"
 weight = 1
