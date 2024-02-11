@@ -3,7 +3,7 @@ name: github pages
 on:
   push:
     branches:
-      - implement-hugo  # Set a branch to deploy
+      - deploy # Set a branch to deploy
   pull_request:
 
 jobs:
