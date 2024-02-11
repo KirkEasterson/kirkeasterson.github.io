@@ -14,7 +14,7 @@ git submodule update --init --recursive
 - Run the hugo server:
 
 ```
-huge server -D
+hugo server -D -s src/
 ```
 
 ### Running in docker
