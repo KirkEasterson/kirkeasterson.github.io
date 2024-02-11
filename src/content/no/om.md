@@ -1,7 +1,7 @@
 ---
 title: "Om"
 date: 2024-02-11T19:01:14+01:00
-draft: true
+draft: false
 ---
 
 Det kommer snart
