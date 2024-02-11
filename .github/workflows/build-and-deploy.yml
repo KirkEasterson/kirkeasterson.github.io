@@ -1,5 +1,5 @@
 ---
-name: Build and deploy
+name: build and deploy
 
 on:
   push:
@@ -25,11 +25,24 @@ jobs:
       - name: Build
         run: hugo -s src/ --minify
 
+      - name: Upload build
+        if: github.ref == 'refs/heads/main'
+        uses: actions/upload-artifact@v4
+        with:
+          name: build-output
+          path: ./public/*
+          retention-days: 1
+
   deploy:
     needs: [build]
     runs-on: ubuntu-22.04
     if: github.ref == 'refs/heads/main'
     steps:
+      - name: Download build
+        uses: actions/download-artifact@v4
+        with:
+          name: build-output
+
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
