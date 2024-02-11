@@ -1,0 +1,10 @@
+[[main]]
+name = "Om meg"
+weight = 1
+url = "om/"
+
+[[main]]
+name = "Kontakt"
+weight = 2
+url = "kontakt/"
+
