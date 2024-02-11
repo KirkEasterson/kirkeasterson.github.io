@@ -1,36 +1,73 @@
 baseURL = "http://kirkeasterson.com/"
-languageCode = "en-us"
+languagecode = "en"
+defaultContentLanguage = "en"
+defaultContentLanguageInSubdir = true
 title = "Kirk Easterson"
 theme = "hugo-coder"
 
+[languages]
+[languages.en]
+contentDir = "content/en"
+disabled = false
+languageCode = "en-GB"
+languageDirection = "ltr"
+languageName = "🇬🇧"
+weight = 1
+[languages.se]
+contentDir = "content/se"
+disabled = false
+languageCode = "se-SV"
+languageDirection = "ltr"
+languageName = "🇸🇪"
+weight = 2
+[languages.no]
+contentDir = "content/no"
+disabled = false
+languageCode = "nb-NO"
+languageDirection = "ltr"
+languageName = "🇳🇴"
+weight = 3
+
+
 [params]
 author = "Kirk Easterson"
-description = "Kirk Easterson's personal website"
-keywords = "programmer,developer,personal"
-info = ["Programmer", "Musician"]
-avatarURL = "images/me.png"
-# gravatar = "kirk.easterson@gmail.com"
-# footerContent = "Enter a text here."
-dateFormat = "02 January 2006"
-hideFooter = true
-hideCredits = true
-hideCopyright = false
-since = 2019
+avatarURL = "img/me.png"
 colorScheme = "auto"
-favicon = "favicon.ico"
+dateFormat = "02 January 2006"
+favicon_32 = "img/favicon-32x32.png"
+favicon_16 = "img/favicon-16x16.png"
+touchIcon = "img/apple-touch-icon.png"
+# footerContent = "Enter a text here."
+# gravatar = "kirk.easterson@gmail.com"
+hideCopyright = true
+hideCredits = true
+hideFooter = true
+since = 2019
+
+[languages.en.params]
+description = "Kirk Easterson's personal website"
+info = ["Developer", "Musician"]
+keywords = "programmer,developer,personal"
+since = 2019
+
+[languages.se.params]
+description = "Kirk Easterson's personliga hemsida"
+info = ["Utvecklare", "Musiker"]
+keywords = "programmer,developer,personal"
+since = 2019
+
+[languages.no.params]
+description = "Kirk Easterson's personlige nettsted"
+info = ["Utvikler", "Musiker"]
+keywords = "programmer,developer,personal"
+since = 2019
+
 
 [[params.social]]
 name = "Github"
 icon = "fa fa-github fa-2x"
 weight = 1
 url = "https://github.com/KirkEasterson"
-
-### TODO: Make a gitlab
-# [[params.social]]
-# name = "Gitlab"
-# icon = "fa fa-gitlab"
-# weight = 2
-# url = "https://gitlab.com/kirkeasterson/"
 
 [[params.social]]
 name = "LinkedIn"
@@ -39,22 +76,34 @@ weight = 2
 url = "https://www.linkedin.com/in/kirkeasterson/"
 
 [[languages.en.menu.main]]
-name = "About"
+name = "About Me"
 weight = 1
 url = "about/"
 
-### TODO: Add blogs, projects, and contact information
-# [[languages.en.menu.main]]
-# name = "Blog"
-# weight = 2
-# url = "posts/"
+[[languages.se.menu.main]]
+name = "Om mig"
+weight = 1
+url = "om/"
 
-# [[languages.en.menu.main]]
-# name = "Projects"
-# weight = 3
-# url = "projects/"
+[[languages.no.menu.main]]
+name = "Om meg"
+weight = 1
+url = "om/"
 
-# [[languages.en.menu.main]]
-# name = "Contact me"
-# weight = 5
-# url = "contact/"
+
+[[languages.en.menu.main]]
+name = "Contact Me"
+weight = 2
+url = "contact/"
+
+
+[[languages.se.menu.main]]
+name = "Kontakta mig"
+weight = 2
+url = "kontakta/"
+
+
+[[languages.no.menu.main]]
+name = "Kontakt meg"
+weight = 2
+url = "kontakt/"
