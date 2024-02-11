@@ -21,7 +21,7 @@ favicon = "favicon.ico"
 
 [[params.social]]
 name = "Github"
-icon = "fa fa-github"
+icon = "fa fa-github fa-2x"
 weight = 1
 url = "https://github.com/KirkEasterson"
 
@@ -34,8 +34,8 @@ url = "https://github.com/KirkEasterson"
 
 [[params.social]]
 name = "LinkedIn"
-icon = "fa fa-linkedin"
-weight = 4
+icon = "fa fa-linkedin fa-2x"
+weight = 2
 url = "https://www.linkedin.com/in/kirkeasterson/"
 
 [[languages.en.menu.main]]
