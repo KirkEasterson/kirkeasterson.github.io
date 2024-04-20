@@ -1,5 +1,5 @@
 ---
-servies:
+services:
   hugo:
     container_name: hugo
     image: peaceiris/hugo:v0.125.1
