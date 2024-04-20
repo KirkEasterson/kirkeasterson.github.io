@@ -38,15 +38,20 @@ jobs:
     runs-on: ubuntu-22.04
     steps:
 
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+          sparse-checkout: ".lighthouserc.yml"
+
       - uses: actions/download-artifact@v4
         with:
           name: ${{ env.BUILD_ARTIFACT }}
-          path: ./public
+          path: "./public"
 
       - name: Run lighthouse CI
         uses: treosh/lighthouse-ci-action@v2
         with:
-          configPath: "./.lighthouserc.yml"
+          configPath: ".lighthouserc.yml"
           temporaryPublicStorage: true
 
   deploy:
