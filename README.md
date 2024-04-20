@@ -34,7 +34,7 @@ make build
 make docker-dev
 ```
 
-    - It can also be run in the background
+- It can also be run in the background
 
 ```sh
 make docker-start
