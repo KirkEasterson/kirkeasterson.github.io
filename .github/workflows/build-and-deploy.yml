@@ -46,7 +46,7 @@ jobs:
       - name: Run lighthouse CI
         uses: treosh/lighthouse-ci-action@v2
         with:
-          configPath: ".lighthouserc.yml"
+          configPath: "./.lighthouserc.yml"
           temporaryPublicStorage: true
 
   deploy:
