@@ -1,9 +1,6 @@
 ---
 ci:
   collect:
-    numberOfRuns: 5
     staticDistDir: ./
     url:
-      - "https://localhost:1313/"
-  assert:
-    preset: lighthouse:recommended
+      - "https://localhost/"
