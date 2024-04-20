@@ -4,25 +4,48 @@
 
 - Init submodules:
 
-```
+```sh
 git submodule update --init --recursive
 ```
 
 ### Running locally
 
 - Install [Hugo](https://gohugo.io/installation/)
-- Run the hugo server:
 
+- Run the `hugo` server:
+
+```sh
+make dev
 ```
-hugo server -D -s src/
+
+- Build the site
+
+```sh
+make build
 ```
 
 ### Running in docker
 
 - Install [docker-compose](https://docs.docker.com/compose/install/)
-- Run the hugo server:
 
-```
-docker-compose up
+- Run the `hugo` server:
+
+```sh
+make docker-dev
 ```
 
+    - It can also be run in the background
+
+```sh
+make docker-start
+
+# do stuff
+
+make docker-stop
+```
+
+- Interact with `hugo`
+
+```sh
+make docker-interact
+```
