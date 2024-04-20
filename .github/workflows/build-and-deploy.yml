@@ -1,11 +1,7 @@
 ---
 name: build and deploy
 
-on:
-  push:
-    branches:
-      - main
-  pull_request:
+on: [push]
 
 jobs:
   build:
