@@ -41,7 +41,6 @@ jobs:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 1
-          sparse-checkout: ".lighthouserc.yml"
 
       - uses: browser-actions/setup-chrome@v1
 
