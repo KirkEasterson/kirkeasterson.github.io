@@ -29,7 +29,7 @@ jobs:
       - name: Upload build
         uses: actions/upload-artifact@v4
         with:
-          name: ${BUILD_ARTIFACT}
+          name: ${{ env.BUILD_ARTIFACT }}
           path: src/public
           retention-days: 10
 
@@ -40,7 +40,7 @@ jobs:
 
       - uses: actions/download-artifact@v4
         with:
-          name: ${BUILD_ARTIFACT}
+          name: ${{ env.BUILD_ARTIFACT }}
           path: ./public
 
       - name: Deploy
