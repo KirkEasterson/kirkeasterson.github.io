@@ -1,0 +1,22 @@
+---
+name: docker
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  smoke-test:
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: recursive
+          fetch-depth: 1
+
+      - uses: adambirds/docker-compose-action@v1.3.0
+        with:
+          # default value
+          compose-file: "./docker-compose.yml"
