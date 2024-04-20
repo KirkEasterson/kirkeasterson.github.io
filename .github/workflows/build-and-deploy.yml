@@ -4,7 +4,7 @@ name: build and deploy
 on: [push]
 
 env:
-  BUILD_ARTIFACT: "build"
+  BUILD_ARTIFACT: "public"
 
 jobs:
 
