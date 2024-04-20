@@ -1,6 +1,6 @@
 ---
 ci:
   collect:
-    staticDistDir: ./
+    startServerCommand: make docker-dev
     url:
-      - "https://localhost/"
+      - "http://localhost:1313/"
