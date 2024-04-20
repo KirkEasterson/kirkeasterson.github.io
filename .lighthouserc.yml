@@ -1,6 +1,6 @@
 ---
 ci:
   collect:
-    startServerCommand: make docker-dev
+    startServerCommand: make dev
     url:
       - "http://localhost:1313/"

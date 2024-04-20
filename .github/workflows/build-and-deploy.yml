@@ -48,6 +48,12 @@ jobs:
           name: ${{ env.BUILD_ARTIFACT }}
           path: "./public"
 
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v3
+        with:
+          hugo-version: 'latest'
+          extended: true
+
       - uses: browser-actions/setup-chrome@v1
 
       - name: Run lighthouse CI
