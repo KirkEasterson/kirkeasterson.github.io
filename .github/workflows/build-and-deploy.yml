@@ -33,6 +33,22 @@ jobs:
           path: src/public
           retention-days: 10
 
+  test:
+    needs: build
+    runs-on: ubuntu-22.04
+    steps:
+
+      - uses: actions/download-artifact@v4
+        with:
+          name: ${{ env.BUILD_ARTIFACT }}
+          path: ./public
+
+      - name: Run lighthouse CI
+        uses: treosh/lighthouse-ci-action@v2
+        with:
+          configPath: ".lighthouserc.yml"
+          temporaryPublicStorage: true
+
   deploy:
     if: github.ref == 'refs/heads/main'
     needs: build
