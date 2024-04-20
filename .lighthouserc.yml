@@ -4,6 +4,6 @@ ci:
     numberOfRuns: 5
     staticDistDir: ./
     url:
-      - "https://localhost/"
+      - "https://localhost:1313/"
   assert:
     preset: lighthouse:recommended
