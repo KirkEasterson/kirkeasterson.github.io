@@ -1,8 +1,7 @@
 ---
 ci:
   collect:
-    startServerCommand: make dev
     url:
-      - "http://localhost:1313/en/"
-      - "http://localhost:1313/se/"
-      - "http://localhost:1313/no/"
+      - "http://www.kirkeasterson.com/en/"
+      - "http://www.kirkeasterson.com/se/"
+      - "http://www.kirkeasterson.com/no/"
