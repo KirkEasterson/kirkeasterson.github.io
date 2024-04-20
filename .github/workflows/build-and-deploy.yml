@@ -31,7 +31,6 @@ jobs:
         with:
           name: ${{ env.BUILD_ARTIFACT }}
           path: src/public
-          retention-days: 10
 
   deploy:
     if: github.ref == 'refs/heads/main'
