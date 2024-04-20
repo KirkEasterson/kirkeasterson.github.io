@@ -41,12 +41,6 @@ jobs:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 1
-          sparse-checkout: ".lighthouserc.yml"
-
-      - uses: actions/download-artifact@v4
-        with:
-          name: ${{ env.BUILD_ARTIFACT }}
-          path: "./public"
 
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v3
@@ -55,13 +49,14 @@ jobs:
           extended: true
 
       - uses: browser-actions/setup-chrome@v1
-
-      - name: Run lighthouse CI
-        uses: treosh/lighthouse-ci-action@v11
+      - uses: actions/setup-node@v3
         with:
-          configPath: ".lighthouserc.yml"
-          uploadArtifacts: true
-          temporaryPublicStorage: true
+          node-version: 18
+      - name: Install lighthouse
+        run: npm install -g @lhci/cli@0.13.x
+
+      - name: Run lighthouse
+        run: lhci autorun
 
   deploy:
     if: github.ref == 'refs/heads/main'
