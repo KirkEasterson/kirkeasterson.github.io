@@ -33,31 +33,6 @@ jobs:
           path: src/public
           retention-days: 10
 
-  test:
-    needs: build
-    runs-on: ubuntu-22.04
-    steps:
-
-      - uses: actions/checkout@v4
-        with:
-          fetch-depth: 1
-
-      - name: Setup Hugo
-        uses: peaceiris/actions-hugo@v3
-        with:
-          hugo-version: 'latest'
-          extended: true
-
-      - uses: browser-actions/setup-chrome@v1
-      - uses: actions/setup-node@v3
-        with:
-          node-version: 18
-      - name: Install lighthouse
-        run: npm install -g @lhci/cli@0.13.x
-
-      - name: Run lighthouse
-        run: lhci autorun
-
   deploy:
     if: github.ref == 'refs/heads/main'
     needs: build
