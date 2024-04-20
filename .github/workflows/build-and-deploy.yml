@@ -3,10 +3,15 @@ name: build and deploy
 
 on: [push]
 
+env:
+  BUILD_ARTIFACT: "public"
+
 jobs:
+
   build:
     runs-on: ubuntu-22.04
     steps:
+
       - uses: actions/checkout@v4
         with:
           submodules: recursive
@@ -19,18 +24,27 @@ jobs:
           extended: true
 
       - name: Build
-        run: hugo -s src/ --minify
+        run: make build
 
       - name: Upload build
         uses: actions/upload-artifact@v4
         with:
-          name: build-output
+          name: ${{ env.BUILD_ARTIFACT }}
           path: src/public
           retention-days: 10
 
+  deploy:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-22.04
+    steps:
+
+      - uses: actions/download-artifact@v4
+        with:
+          name: ${{ env.BUILD_ARTIFACT }}
+          path: ./public
+
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v4
-        if: github.ref == 'refs/heads/main'
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: src/public
+          publish_dir: ./public
