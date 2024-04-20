@@ -3,4 +3,6 @@ ci:
   collect:
     startServerCommand: make dev
     url:
-      - "http://localhost:1313/"
+      - "http://localhost:1313/en/"
+      - "http://localhost:1313/se/"
+      - "http://localhost:1313/no/"
