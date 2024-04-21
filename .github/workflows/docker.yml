@@ -12,7 +12,4 @@ jobs:
           submodules: recursive
           fetch-depth: 1
 
-      - uses: adambirds/docker-compose-action@v1.3.0
-        with:
-          # default value
-          compose-file: "./docker-compose.yml"
+      - uses: hoverkraft-tech/compose-action@v2.0.0
