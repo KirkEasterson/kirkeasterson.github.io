@@ -12,4 +12,4 @@ jobs:
           submodules: recursive
           fetch-depth: 1
 
-      - uses: hoverkraft-tech/docker-compose-action@v2
+      - uses: hoverkraft-tech/compose-action@v2
