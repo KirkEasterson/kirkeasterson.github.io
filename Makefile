@@ -19,8 +19,8 @@ clean-build:
 clean-lh:
 	@rm -rf ./.lighthouseci/
 
-.PHONY: lh
-lh:
+.PHONY: lh-ci
+lh-ci:
 	@$(MAKE) clean-lh
 	@lhci autorun --config ./lighthouse/ci.lighthouserc.yml
 

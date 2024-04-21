@@ -68,7 +68,7 @@ jobs:
         run: npm install -g @lhci/cli@0.13.x
 
       - name: Run lighthouse
-        run: make lh-prod
+        run: make lh-ci
 
       - name: Upload artifacts
         if: always()
