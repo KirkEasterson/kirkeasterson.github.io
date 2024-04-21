@@ -1,0 +1,10 @@
+---
+ci:
+  collect:
+    numberOfRuns: 1
+    isSinglePageApplication: false
+    heaadful: false
+    url:
+      - "https://www.kirkeasterson.com/en/"
+  assert:
+    preset: "lighthouse:recommended"
