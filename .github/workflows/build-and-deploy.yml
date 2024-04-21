@@ -4,7 +4,8 @@ name: build and deploy
 on: [push]
 
 env:
-  BUILD_ARTIFACT: "public"
+  BUILD_ARTIFACT: "build"
+  LIGHTHOUSE_ARTIFACT: "lighthouse"
 
 jobs:
 
@@ -31,7 +32,6 @@ jobs:
         with:
           name: ${{ env.BUILD_ARTIFACT }}
           path: src/public
-          retention-days: 10
 
   deploy:
     if: github.ref == 'refs/heads/main'
@@ -49,3 +49,30 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public
+
+  lighthouse:
+    if: github.ref == 'refs/heads/main'
+    needs: deploy
+    runs-on: ubuntu-22.04
+    steps:
+
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: Install lighthouse
+        run: npm install -g @lhci/cli@0.13.x
+
+      - name: Run lighthouse
+        run: make lh-ci
+
+      - name: Upload artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ env.LIGHTHOUSE_ARTIFACT }}
+          path: ".lighthouseci"
