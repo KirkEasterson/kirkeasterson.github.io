@@ -49,3 +49,13 @@ make docker-stop
 ```sh
 make docker-interact
 ```
+
+## Roadmap
+
+- [ ] add portfolio section
+- [ ] add blog section
+- [ ] add contact form instead of posting email address
+- [ ] add CV
+- [ ] add tests for accessibility
+- [ ] finetune lighthouserc
+- [ ] add cypress (or some alternative) tests
