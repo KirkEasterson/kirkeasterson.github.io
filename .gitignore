@@ -2,4 +2,4 @@ src/public/
 src/resources/
 src/.hugo_build.lock
 
-.lighthouseci/
+*.lighthouseci/
