@@ -1,7 +1,0 @@
----
-ci:
-  collect:
-    url:
-      - "http://www.kirkeasterson.com/en/"
-      - "http://www.kirkeasterson.com/se/"
-      - "http://www.kirkeasterson.com/no/"
