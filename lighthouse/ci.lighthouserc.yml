@@ -1,0 +1,12 @@
+---
+ci:
+  collect:
+    numberOfRuns: 5
+    isSinglePageApplication: false
+    heaadful: false
+    url:
+      - "https://www.kirkeasterson.com/en/"
+      - "https://www.kirkeasterson.com/se/"
+      - "https://www.kirkeasterson.com/no/"
+  assert:
+    budgetsFile: "./lighthouse/budget.json"

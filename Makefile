@@ -2,9 +2,32 @@
 dev:
 	@hugo server -D -s src/
 
+.PHONY: clean-build
+clean:
+	@rm -rf ./src/public/
+
 .PHONY: build
 build:
 	@hugo -s src/ --minify
+
+.PHONY: clean-and-build
+clean-build:
+	@$(MAKE) clean-build
+	@$(MAKE) build
+
+.PHONY: clean-lh
+clean-lh:
+	@rm -rf ./.lighthouseci/
+
+.PHONY: lh-ci
+lh-ci:
+	@$(MAKE) clean-lh
+	@lhci autorun --config ./lighthouse/ci.lighthouserc.yml
+
+.PHONY: lh-full
+lh-full:
+	@$(MAKE) clean-lh
+	@lhci autorun --config=./lighthouse/full.lighthouserc.yml
 
 .PHONY: docker-dev
 docker-dev:
