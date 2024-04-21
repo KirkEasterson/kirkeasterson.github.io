@@ -6,8 +6,16 @@ updates:
     directory: "/"
     schedule:
       interval: "daily"
+      time: "08:00"
+      timezone: "Europe/Oslo"
+    reviewers:
+      - "kirkeasterson"
 
   - package-ecosystem: "docker"
     directory: "/"
     schedule:
       interval: "daily"
+      time: "08:00"
+      timezone: "Europe/Oslo"
+    reviewers:
+      - "kirkeasterson"
