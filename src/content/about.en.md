@@ -6,3 +6,5 @@ translationKey: "about"
 ---
 
 Coming soon
+
+Test of a change
