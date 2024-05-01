@@ -5,7 +5,7 @@ data "cloudflare_accounts" "cloudflare_account_data" {
 resource "cloudflare_pages_project" "source_config" {
   account_id        = var.cf_account_id
   name              = replace(var.gh_repo_name, ".", "-")
-  production_branch = data.github_repository.source.default_branch
+  production_branch = github_branch_default.this.branch
 
   build_config {
     build_command   = "hugo --gc --minify"
@@ -19,13 +19,13 @@ resource "cloudflare_pages_project" "source_config" {
     config {
       owner                         = data.github_user.kirk.username
       repo_name                     = var.gh_repo_name
-      production_branch             = data.github_repository.source.default_branch
+      production_branch             = github_branch_default.this.branch
       pr_comments_enabled           = true
       deployments_enabled           = true
       production_deployment_enabled = true
       preview_deployment_setting    = "custom"
       preview_branch_excludes = [
-        data.github_repository.source.default_branch,
+        github_branch_default.this.branch,
         "gh-pages"
       ]
     }
