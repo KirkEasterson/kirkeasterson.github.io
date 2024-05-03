@@ -5,17 +5,20 @@ data "github_user" "kirk" {
 resource "github_repository" "this" {
   name         = "kirkeasterson.github.io"
   description  = "My personal website"
-  homepage_url = "https://www.kirkeasterson.com"
+  homepage_url = "https://www.${var.domain}"
 
   visibility             = "public"
   delete_branch_on_merge = true
   allow_update_branch    = true
-  has_downloads          = true
-  has_projects           = true
+  has_discussions        = false
+  has_downloads          = false
+  has_issues             = false
+  has_projects           = false
+  has_wiki               = false
   vulnerability_alerts   = true
 
   pages {
-    cname = "www.kirkeasterson.com"
+    cname = "www.${var.domain}"
     source {
       branch = "gh-pages"
     }
