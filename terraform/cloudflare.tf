@@ -1,7 +1,3 @@
-data "cloudflare_accounts" "cloudflare_account_data" {
-  name = "kirkeasterson"
-}
-
 resource "cloudflare_pages_project" "source_config" {
   account_id        = var.cf_account_id
   name              = replace(var.gh_repo_name, ".", "-")
@@ -30,4 +26,19 @@ resource "cloudflare_pages_project" "source_config" {
       ]
     }
   }
+}
+
+resource "cloudflare_pages_domain" "my-domain" {
+  account_id   = var.cf_account_id
+  project_name = cloudflare_pages_project.source_config.name
+  domain       = var.domain
+}
+
+resource "cloudflare_record" "www" {
+  zone_id = var.cf_zone_id
+  name    = "www"
+  value   = cloudflare_pages_project.source_config.subdomain
+  type    = "CNAME"
+  proxied = true
+  ttl     = 1 # necessary when using proxied
 }
