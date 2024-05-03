@@ -1,3 +1,9 @@
+variable "domain" {
+  description = "Domain of the website"
+  type        = string
+  default     = "kirkeasterson.com"
+}
+
 variable "gh_token" {
   description = "Github token"
   type        = string
@@ -24,9 +30,4 @@ variable "cf_account_id" {
   description = "Cloudflare account ID"
   type        = string
   sensitive   = true
-}
-
-variable "cf_domain" {
-  description = "Cloudflare domain"
-  type        = string
 }
