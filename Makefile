@@ -1,6 +1,6 @@
 .PHONY: dev
 dev:
-	@hugo server -D -s src/
+	@hugo server --buildDrafts --source src/ --gc --logLevel info
 
 .PHONY: clean-build
 clean:
