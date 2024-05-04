@@ -1,4 +1,7 @@
 ---
+
+extends: default
+
 rules:
   key-ordering: disable
   empty-lines:
