@@ -1,0 +1,21 @@
+---
+en:
+  disabled: false
+  languageCode: "en-GB"
+  languageDirection: "ltr"
+  languageName: "🇬🇧"
+  weight: 1
+
+se:
+  disabled: false
+  languageCode: "se-SV"
+  languageDirection: "ltr"
+  languageName: "🇸🇪"
+  weight: 2
+
+no:
+  disabled: false
+  languageCode: "nb-NO"
+  languageDirection: "ltr"
+  languageName: "🇳🇴"
+  weight: 3
