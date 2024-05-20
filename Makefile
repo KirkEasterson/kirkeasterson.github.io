@@ -2,17 +2,19 @@
 dev:
 	@hugo server --buildDrafts --source src/ --gc --logLevel info
 
-.PHONY: clean-build
+.PHONY: clean
 clean:
 	@rm -rf ./src/public/
+	@rm -rf ./src/resources/
+	@rm ./src/.hugo_build.lock
 
 .PHONY: build
 build:
 	@hugo -s src/ --minify
 
 .PHONY: clean-and-build
-clean-build:
-	@$(MAKE) clean-build
+clean-and-build:
+	@$(MAKE) clean
 	@$(MAKE) build
 
 .PHONY: clean-lh
