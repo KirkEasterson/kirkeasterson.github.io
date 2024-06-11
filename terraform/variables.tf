@@ -31,3 +31,9 @@ variable "cf_account_id" {
   type        = string
   sensitive   = true
 }
+
+variable "mc_server_ip" {
+  description = "IP address of the minecraft server"
+  type        = string
+  sensitive   = true
+}
