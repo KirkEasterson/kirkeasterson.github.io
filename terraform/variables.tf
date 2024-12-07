@@ -7,11 +7,13 @@ variable "domain" {
 variable "gh_token" {
   description = "Github token"
   type        = string
+  sensitive   = true
 }
 
 variable "gh_repo_name" {
   description = "Github repository name"
   type        = string
+  default     = "kirkeasterson.github.io"
 }
 
 variable "cf_api_token" {

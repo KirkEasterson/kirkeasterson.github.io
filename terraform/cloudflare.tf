@@ -10,6 +10,19 @@ resource "cloudflare_pages_project" "source_config" {
     build_caching   = true
   }
 
+  deployment_configs {
+    production {
+      environment_variables = {
+        HUGO_VERSION = "0.138.0"
+      }
+    }
+    preview {
+      environment_variables = {
+        HUGO_VERSION = "0.138.0"
+      }
+    }
+  }
+
   source {
     type = "github"
     config {
@@ -37,8 +50,11 @@ resource "cloudflare_pages_domain" "my_domain" {
 resource "cloudflare_record" "www" {
   zone_id = var.cf_zone_id
   name    = "www"
-  value   = github_repository.this.name
   type    = "CNAME"
   proxied = true
   ttl     = 1 # necessary when using proxied
+
+  data {
+    value = github_repository.this.name
+  }
 }
