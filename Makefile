@@ -10,7 +10,7 @@ clean:
 
 .PHONY: build
 build:
-	@hugo -s src/ --minify
+	@hugo -s src/ --gc --minify
 
 .PHONY: clean-and-build
 clean-and-build:
