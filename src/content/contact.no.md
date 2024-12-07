@@ -5,4 +5,4 @@ draft: false
 translationKey: "contact"
 ---
 
-* E-post: kirk.easterson@gmail.com
+* E-post: kirk.easterson [at] gmail [dot] com
