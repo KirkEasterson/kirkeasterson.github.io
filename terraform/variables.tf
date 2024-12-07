@@ -13,7 +13,7 @@ variable "gh_token" {
 variable "gh_repo_name" {
   description = "Github repository name"
   type        = string
-  default = "kirkeasterson.github.io"
+  default     = "kirkeasterson.github.io"
 }
 
 variable "cf_api_token" {

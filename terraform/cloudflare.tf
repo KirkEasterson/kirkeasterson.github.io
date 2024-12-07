@@ -13,13 +13,13 @@ resource "cloudflare_pages_project" "source_config" {
   deployment_configs {
     production {
       environment_variables = {
-	    HUGO_VERSION = "0.138.0"
-	  }
+        HUGO_VERSION = "0.138.0"
+      }
     }
     preview {
       environment_variables = {
-	    HUGO_VERSION = "0.138.0"
-	  }
+        HUGO_VERSION = "0.138.0"
+      }
     }
   }
 
@@ -55,6 +55,6 @@ resource "cloudflare_record" "www" {
   ttl     = 1 # necessary when using proxied
 
   data {
-    value   = github_repository.this.name
+    value = github_repository.this.name
   }
 }
