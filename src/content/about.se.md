@@ -5,4 +5,4 @@ draft: false
 translationKey: "about"
 ---
 
-Det kommer snart
+Hei! Jag heter Kirk Easterson — en utvecklare med en passion för musik. Jag tycker om att mixtra med mitt homelab. Du kan vanligtvis hitta mig när jag redigerar mina dotfiles.

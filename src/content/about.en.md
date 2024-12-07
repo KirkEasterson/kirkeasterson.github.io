@@ -5,4 +5,4 @@ draft: false
 translationKey: "about"
 ---
 
-Coming soon
+Hi! I'm Kirk Easterson — a developer with a passion for music. I enjoy tinkering with my homelab. You can usually find me editing my dotfiles.
