@@ -3,5 +3,5 @@ languagecode: "en"
 defaultContentLanguage: "en"
 defaultContentLanguageInSubdir: true
 title: "Kirk Easterson"
-theme: "hugo-coder"
+theme: ["hugo-cloak-email", "hugo-coder"]
 enableRobotsTXT: true

@@ -5,4 +5,4 @@ draft: false
 translationKey: "contact"
 ---
 
-- Email: kirk.easterson [at] gmail [dot] com
+- Email: {{< cloakemail "kirk.easterson@gmail.com" >}}
