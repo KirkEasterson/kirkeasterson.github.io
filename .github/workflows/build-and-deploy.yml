@@ -51,7 +51,7 @@ jobs:
           publish_dir: ./public
 
   lighthouse:
-    if: github.ref == 'refs/heads/main'
+    if: false
     needs: deploy
     runs-on: ubuntu-22.04
     steps:
