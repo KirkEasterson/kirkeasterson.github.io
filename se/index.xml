@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Kirk Easterson</title><link>/se/</link><description>Recent content on Kirk Easterson</description><generator>Hugo</generator><language>se-SV</language><lastBuildDate>Sun, 11 Feb 2024 19:03:30 +0100</lastBuildDate><atom:link href="/se/index.xml" rel="self" type="application/rss+xml"/><item><title/><link>/se/kontakta/</link><pubDate>Sun, 11 Feb 2024 19:03:30 +0100</pubDate><guid>/se/kontakta/</guid><description>&lt;ul>
 &lt;li>E-post: 
 &lt;style>
- #span-3e31ad64.cloaked-e-mail:before {
+ #span-b3cb95a0.cloaked-e-mail:before {
  content:attr(data-domain) "\0040" attr(data-user);
  unicode-bidi:bidi-override;
  direction:rtl;
  }
 &lt;/style>
-&amp;#32;&lt;span class="cloaked-e-mail" data-user="nosretsae.krik" data-domain="moc.liamg" id="span-3e31ad64">&lt;/span>&amp;#32;
+&amp;#32;&lt;span class="cloaked-e-mail" data-user="nosretsae.krik" data-domain="moc.liamg" id="span-b3cb95a0">&lt;/span>&amp;#32;
 
-&lt;script id="script-3e31ad64">
- var scriptTag = document.getElementById("script-3e31ad64");
+&lt;script id="script-b3cb95a0">
+ var scriptTag = document.getElementById("script-b3cb95a0");
  var link = document.createElement("a");
  var address = "nosretsae.krik".split('').reverse().join('') + "@" + "moc.liamg".split('').reverse().join('');
  link.href = "mailto" + ":" + address;
