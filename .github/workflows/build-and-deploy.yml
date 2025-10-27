@@ -28,7 +28,7 @@ jobs:
         run: make build
 
       - name: Upload build
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         with:
           name: ${{ env.BUILD_ARTIFACT }}
           path: src/public
@@ -72,7 +72,7 @@ jobs:
 
       - name: Upload artifacts
         if: always()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         with:
           name: ${{ env.LIGHTHOUSE_ARTIFACT }}
           path: ".lighthouseci"
