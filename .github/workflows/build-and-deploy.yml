@@ -8,24 +8,15 @@ env:
   LIGHTHOUSE_ARTIFACT: "lighthouse"
 
 jobs:
-
   build:
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-latest
     steps:
-
       - uses: actions/checkout@v4
         with:
           submodules: recursive
           fetch-depth: 1
 
-      - name: Setup Hugo
-        uses: peaceiris/actions-hugo@v3
-        with:
-          hugo-version: 'latest'
-          extended: true
-
-      - name: Build
-        run: make build
+      - run: make build
 
       - name: Upload build
         uses: actions/upload-artifact@v4
@@ -38,7 +29,6 @@ jobs:
     needs: build
     runs-on: ubuntu-22.04
     steps:
-
       - uses: actions/download-artifact@v4
         with:
           name: ${{ env.BUILD_ARTIFACT }}
@@ -55,7 +45,6 @@ jobs:
     needs: deploy
     runs-on: ubuntu-22.04
     steps:
-
       - uses: actions/checkout@v4
         with:
           fetch-depth: 1
