@@ -2,7 +2,7 @@
 services:
   hugo:
     container_name: hugo
-    image: hugomods/hugo:debian-base
+    image: hugomods/hugo:base-0.147.9
     network_mode: "host"
     volumes:
       - ./src:/src
