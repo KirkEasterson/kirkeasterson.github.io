@@ -9,3 +9,7 @@ build: clean
 .PHONY: dev
 dev: clean
 	docker compose run --rm hugo server --buildDrafts --logLevel info
+
+.PHONY: tflint
+tflint:
+	docker compose run --rm tflint

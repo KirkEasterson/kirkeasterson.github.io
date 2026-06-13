@@ -6,3 +6,9 @@ services:
     network_mode: "host"
     volumes:
       - ./src:/src
+
+  tflint:
+    container_name: tflint
+    image: ghcr.io/terraform-linters/tflint:v0.63.0
+    volumes:
+      - ./infrastructure/terraform/:/data
