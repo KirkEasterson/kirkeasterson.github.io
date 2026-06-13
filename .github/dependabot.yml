@@ -8,14 +8,10 @@ updates:
       interval: "daily"
       time: "08:00"
       timezone: "Europe/Oslo"
-    reviewers:
-      - "kirkeasterson"
 
-  - package-ecosystem: "docker"
+  - package-ecosystem: "docker-compose"
     directory: "/"
     schedule:
       interval: "daily"
       time: "08:00"
       timezone: "Europe/Oslo"
-    reviewers:
-      - "kirkeasterson"
