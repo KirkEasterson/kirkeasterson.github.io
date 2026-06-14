@@ -6,8 +6,8 @@ clean:
 build: clean
 	docker compose run --rm -v /etc/passwd:/etc/passwd:ro -v /etc/group:/etc/group:ro -u $(shell id -u) hugo --gc --minify
 
-.PHONY: dev
-dev:
+.PHONY: run
+run:
 	docker compose run --rm -v /etc/passwd:/etc/passwd:ro -v /etc/group:/etc/group:ro -u $(shell id -u) hugo server --buildDrafts --logLevel info
 
 .PHONY: lint
