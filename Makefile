@@ -33,4 +33,3 @@ yamllint:
 .PHONY: tflint
 tflint:
 	docker compose run --rm tflint
-
