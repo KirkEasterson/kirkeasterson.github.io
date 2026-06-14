@@ -16,7 +16,7 @@ lint: valelint markdownlint tflint yamllint
 styles:
 	mkdir -p styles
 	ln -s $(shell pwd)/config $(shell pwd)/styles/config
-	docker compose run --rm vale sync
+	docker compose run --rm -v /etc/passwd:/etc/passwd:ro -v /etc/group:/etc/group:ro -u $(shell id -u) vale sync
 
 .PHONY: valelint
 valelint: styles

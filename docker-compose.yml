@@ -10,12 +10,9 @@ services:
   vale:
     image: docker.io/grafana/vale:4dbecae7443c69b3e5fdfeeac7037a339cb82e4c
     container_name: vale
-    user: "${CURRENT_UID:-1000:1000}"
     volumes:
       - .:/data
       - ./config:/data/styles/config
-      - /etc/passwd:/etc/passwd:ro
-      - /etc/group:/etc/group:ro
     working_dir: /data
 
   markdownlint:
