@@ -1,6 +1,8 @@
+SRC_DIR=./src/
+
 .PHONY: clean
 clean:
-	rm -rf src/public src/resources src/.hugo_build.lock
+	rm -rf $(SRC_DIR)/public $(SRC_DIR)/resources $(SRC_DIR)/.hugo_build.lock
 
 .PHONY: build
 build: clean
