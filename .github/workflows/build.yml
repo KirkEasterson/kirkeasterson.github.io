@@ -5,7 +5,6 @@ name: build
 
 env:
   BUILD_ARTIFACT: "build"
-  LIGHTHOUSE_ARTIFACT: "lighthouse"
 
 jobs:
   build:
