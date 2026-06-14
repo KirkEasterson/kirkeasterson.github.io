@@ -10,6 +10,10 @@ build: clean
 dev: clean
 	docker compose run --rm hugo server --buildDrafts --logLevel info
 
+.PHONY: markdownlint
+markdownlint:
+	docker compose run --rm markdownlint mdl .
+
 .PHONY: tflint
 tflint:
 	docker compose run --rm tflint

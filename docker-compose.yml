@@ -13,6 +13,13 @@ services:
     volumes:
       - ./:/code
 
+  markdownlint:
+    container_name: markdownlint
+    image: registry.gitlab.com/pipeline-components/markdownlint:latest
+    volumes:
+      - ./:/code
+      - /code/src/themes/
+
   tflint:
     container_name: tflint
     image: ghcr.io/terraform-linters/tflint:v0.63.0
