@@ -5,5 +5,7 @@ draft: false
 translationKey: "about"
 ---
 
-Hi! I'm Kirk Easterson — a developer with a passion for music. I enjoy
-tinkering with my homelab. You can usually find me editing my dotfiles.
+# About me
+
+My name is Kirk Easterson, a developer with a passion for music. I enjoy
+tinkering with my homelab. I use most of my time editing my dotfiles.

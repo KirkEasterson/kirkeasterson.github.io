@@ -1,0 +1,5 @@
+(?i)easterson
+(?i)dotfiles
+(?i)homelab
+cloakemail
+adsf
