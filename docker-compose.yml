@@ -11,7 +11,7 @@ services:
     image: docker.io/grafana/vale:4dbecae7443c69b3e5fdfeeac7037a339cb82e4c
     container_name: vale
     volumes:
-      - .:/data
+      - .:/data:ro
       - ./config:/data/styles/config
     working_dir: /data
 
@@ -19,7 +19,7 @@ services:
     container_name: markdownlint
     image: registry.gitlab.com/pipeline-components/markdownlint:latest
     volumes:
-      - ./:/code
+      - ./:/code:ro
       - /code/src/themes/
       - /code/styles/
 
@@ -27,10 +27,10 @@ services:
     container_name: yamllint
     image: registry.gitlab.com/pipeline-components/yamllint:latest
     volumes:
-      - ./:/code
+      - ./:/code:ro
 
   tflint:
     container_name: tflint
     image: ghcr.io/terraform-linters/tflint:v0.63.0
     volumes:
-      - ./infrastructure/terraform/:/data
+      - ./infrastructure/terraform/:/data:ro
