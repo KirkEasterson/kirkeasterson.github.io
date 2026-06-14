@@ -7,6 +7,12 @@ services:
     volumes:
       - ./src:/src
 
+  yamllint:
+    container_name: yamllint
+    image: registry.gitlab.com/pipeline-components/yamllint:latest
+    volumes:
+      - ./:/code
+
   tflint:
     container_name: tflint
     image: ghcr.io/terraform-linters/tflint:v0.63.0

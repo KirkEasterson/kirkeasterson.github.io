@@ -13,3 +13,7 @@ dev: clean
 .PHONY: tflint
 tflint:
 	docker compose run --rm tflint
+
+.PHONY: yamllint
+yamllint:
+	docker compose run --rm yamllint yamllint .

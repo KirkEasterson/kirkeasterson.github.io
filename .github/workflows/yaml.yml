@@ -1,7 +1,7 @@
 ---
 name: yml
 
-on:
+"on":
   push:
     branches:
       - "main"
