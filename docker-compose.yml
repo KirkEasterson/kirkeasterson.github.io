@@ -32,6 +32,6 @@ services:
 
   tflint:
     container_name: tflint
-    image: ghcr.io/terraform-linters/tflint:v0.63.0
+    image: ghcr.io/terraform-linters/tflint:v0.63.1
     volumes:
       - ./infrastructure/terraform/:/data:ro
