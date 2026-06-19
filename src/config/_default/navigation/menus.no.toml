@@ -4,7 +4,12 @@ weight = 1
 url = "om/"
 
 [[main]]
-name = "Kontakt"
+name = "Portfølje"
 weight = 2
+url = "portfolje/"
+
+[[main]]
+name = "Kontakt"
+weight = 3
 url = "kontakt/"
 
